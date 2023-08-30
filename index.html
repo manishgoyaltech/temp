@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Countdown to June 9, 2024</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .countdown-container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .countdown-text {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+</style>
+</head>
+<body>
+<div class="countdown-container">
+  <h1>Countdown to June 9, 2024</h1>
+  <p class="countdown-text" id="countdown"></p>
+</div>
+
+<script>
+function updateCountdown() {
+  const currentDate = new Date();
+  const targetDate = new Date("June 9, 2024");
+  const timeDifference = targetDate - currentDate;
+  
+  const daysLeft = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+  document.getElementById("countdown").textContent = `${daysLeft} days left`;
+}
+
+updateCountdown(); // Initial call
+setInterval(updateCountdown, 1000); // Update every second
+</script>
+</body>
+</html>
